@@ -96,7 +96,24 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+
+carro.addPessoas = function(passageiros) {
+    let AindaCabem = carro.assentos - carro.quantidadePessoas
+    let SouP = 'pessoas'
+    carro.quantidadePessoas += passageiros
+    if (carro.quantidadePessoas > AindaCabem && carro.quantidadePessoas > carro.assentos) {
+        return `Há passageiro(s) em excesso, e no carro só há ${carro.assentos} assentos, retire-o(s)`
+    } else if (carro.quantidadePessoas < carro.assentos) {
+        SouP = carro.quantidadePessoas === 1 ? 'pessoa' : 'pessoas'
+        return `Já temos ${carro.quantidadePessoas} ${SouP} no carro!`
+    } else if (carro.quantidadePessoas === carro.assentos) {
+        return `O carro já está lotado!`
+    }
+}
+
+carro.removerPessoas = function(x) {
+    carro.quantidadePessoas -= x
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -106,19 +123,19 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.cor // 'branco'
+carro.obterCor() // 'branco'
 
 // Mude a cor do carro para vermelho.
 carro.mudarCor('vermelho')
 
 // E agora, qual a cor do carro?
-carro.cor // 'vermelho'
+carro.obterCor() // 'vermelho'
 
 // Mude a cor do carro para verde musgo.
 carro.mudarCor('verde musgo')
 
 // E agora, qual a cor do carro?
-carro.cor // 'verde musgo'
+carro.obterCor() // 'verde musgo'
 
 // Qual a marca e modelo do carro?
 carro.obterMarcaModelo()

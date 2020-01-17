@@ -98,10 +98,14 @@ citado acima, no lugar de "pessoas".
 */
 
 carro.addPessoas = function(passageiros) {
+    carro.quantidadePessoas += passageiros
     let AindaCabem = carro.assentos - carro.quantidadePessoas
     let SouP = 'pessoas'
-    carro.quantidadePessoas += passageiros
-    if (carro.quantidadePessoas > AindaCabem && carro.quantidadePessoas > carro.assentos) {
+    if (passageiros > carro.assentos) {
+        let faltam = passageiros - carro.assentos
+        SouP = faltam === 1 ? 'pessoa' : 'pessoas'
+        return `Só cabem mais ${faltam} ${SouP}`
+    } else if (carro.quantidadePessoas > AindaCabem && carro.quantidadePessoas > carro.assentos) {
         return `Há passageiro(s) em excesso, e no carro só há ${carro.assentos} assentos, retire-o(s)`
     } else if (carro.quantidadePessoas < carro.assentos) {
         SouP = carro.quantidadePessoas === 1 ? 'pessoa' : 'pessoas'

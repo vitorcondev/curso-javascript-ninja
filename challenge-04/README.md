@@ -113,7 +113,7 @@ carro.addPessoas = function(passageiros) {
     } else if (carro.quantidadePessoas === carro.assentos) {
         return `O carro já está lotado!`
     }
-}
+} xxxxxxxxxxxxx Errado!!!!
 
 carro.removerPessoas = function(x) {
     carro.quantidadePessoas -= x
@@ -145,20 +145,20 @@ carro.obterCor() // 'verde musgo'
 carro.obterMarcaModelo()
 
 // Adicione 2 pessoas no carro.
-carro.addPessoas(2)
+carro.addPessoas(2) // "Já temos 2 pessoas no carro"
 
 // Adicione mais 4 pessoas no carro.
-carro.addPessoas(4)
+carro.addPessoas(4) // "Só cabem mais três pessoas"
 
 // Faça o carro encher.
-carro.addPessoas(5)
+carro.addPessoas(3) // "Já temos 5 pessoas no carro"
 
 // Tire 4 pessoas do carro.
-carro.removerPessoas(4)
+carro.addPessoas(-4) // "Já temos 1 pessoa no carro"
 
 // Adicione 10 pessoas no carro.
-carro.addPessoas(10)
+carro.addPessoas(10) // "Só cabem mais 4 pessoas no carro"
 
 // Quantas pessoas temos no carro?
-carro.quantidadePessoas // 17
+carro.quantidadePessoas // 1
 ```

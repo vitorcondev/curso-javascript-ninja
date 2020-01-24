@@ -2,7 +2,7 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-var ValoresArray = ['vitor', 1, false, NaN, 1.2]
+var ValoresArray = ['vitor', 1, false, NaN, 1.2, function() {}]
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
@@ -23,9 +23,7 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 function indiceParam(array, num) {
-  array = [3, 4, 5]
-  num = 2
-  return array[2]
+  return arr [ index ]
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
@@ -36,7 +34,7 @@ var tiposDiferentes = [undefined, false, 0, 'leite', 2.3]
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-meusArrays(tiposDiferentes)
+indiceParam([1, 2, 3], 2)
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do

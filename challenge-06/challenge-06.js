@@ -14,7 +14,6 @@ desafio.
 */
 // ?
 
-console.log( 'Times que estão participando do campeonato:', teams );
 
 /*
 Crie uma função chamada `showTeamPosition` com as seguintes características:

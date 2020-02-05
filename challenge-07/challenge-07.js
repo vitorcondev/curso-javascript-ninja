@@ -53,8 +53,20 @@ Só vamos mudar o range:
 - No primeiro "for", mostre os números pares entre 100 e 120, inclusive eles;
 - No segundo "for", mostre os números ímpares entre 111 e 125, inclusive eles.
 */
-console.log( 'Números pares entre 100 e 120:' );
-// ?
+paresCentenario = []
+for(num = 100; num <= 120; num++) {
+  if (num % 2 === 0) {
+    paresCentenario.push(num)
+  }
+}
+console.log('Números pares entre 100 e 120:', paresCentenario);
+//
 
-console.log( 'Números ímpares entre 111 e 125:' );
+imparesCentenario = []
+for(num1 = 111; num1 <= 125; num1++) {
+  if (num1 % 2 !== 0) {
+    imparesCentenario.push(num1)
+  }
+}
+console.log( 'Números ímpares entre 111 e 125:', imparesCentenario );
 // ?
